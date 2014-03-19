@@ -1,7 +1,7 @@
 {
-  "name": "brackets.io.forbesmyester.run-menu-item.git",
-  "version": "0.5.0",
-  "description": "Run a menu item. Due to Brackets.IO poor keybindings my intention is to take it outside into a macro runner in the OS and execute functions using this this as apposed to native in-app key bindings...",
+  "name": "Rubbish CtrlP Clone",
+  "version": "0.5.1",
+  "description": "This is a bare bones, super unpolished, wrote after a drink clone of Sublime's CtrlP",
   "author": "Matthew Forrester <matt@keyboardwritescode.com>",
   "dependencies": {
   },

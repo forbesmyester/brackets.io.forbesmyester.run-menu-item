@@ -68,7 +68,7 @@ define(function (/* require, exports, module */) {
     var MY_COMMAND_ID_A = "forbesmyester.run-menu-item";
     
     CommandManager.register(
-        "Run Menu Command",
+        "Rubbish CtrlP Clone",
         MY_COMMAND_ID_A,
         handleHelloWorld.bind(this, '')
     );
