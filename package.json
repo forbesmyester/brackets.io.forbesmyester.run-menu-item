@@ -1,7 +1,7 @@
 {
   "name": "Rubbish CtrlP Clone",
-  "version": "0.5.1",
-  "description": "This is a bare bones, super unpolished, wrote after a drink clone of Sublime's CtrlP",
+  "version": "0.5.2",
+  "description": "This is a bare bones, super unpolished, wrote after a drink clone of Sublime's CtrlP ",
   "author": "Matthew Forrester <matt@keyboardwritescode.com>",
   "dependencies": {
   },
