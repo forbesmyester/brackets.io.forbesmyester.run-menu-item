@@ -1,7 +1,7 @@
 {
   "name": "brackets.io.forbesmyester.run-menu-item.git",
   "title": "Rubbish CtrlP Clone",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "This is a bare bones, super unpolished, wrote after a drink clone of Sublime's CtrlP ",
   "author": "Matthew Forrester <matt@keyboardwritescode.com>",
   "dependencies": {

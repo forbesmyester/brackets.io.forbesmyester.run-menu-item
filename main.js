@@ -10,17 +10,16 @@ define(function (/* require, exports, module */) {
     
     var CommandManager = brackets.getModule("command/CommandManager"),
         Menus = brackets.getModule("command/Menus"),
-        Dialogs         = brackets.getModule("widgets/Dialogs"),
-        allCommands = CommandManager.getAll();
+        Dialogs         = brackets.getModule("widgets/Dialogs");
     
-    var getMatching = function(input) {
+    var getMatching = function(allCommands, input) {
         return allCommands.filter(function(s) {
             return (s.toLowerCase().indexOf(input.toLowerCase()) > -1);
         }).sort();
     };
     
-    var getInput = function(cb) {
-        // Crap copy from surround plugin (c) Patrick Edelman
+    var getInput = function(allCommands, cb) {
+        // Based on code from Patrick Edelman, but made worse!
         Dialogs.showModalDialogUsingTemplate([
             '<div class="jkfdasjrejj">',
             '<input type="text" autofocus="true" id="jkfdasjrejj"/><br/>',
@@ -48,7 +47,7 @@ define(function (/* require, exports, module */) {
             }
             $('.jkfdasjrejj').find('select').html('');
             var _c = $('#jkfdasjrejj').val();
-            var newCommands = getMatching(_c);
+            var newCommands = getMatching(allCommands, _c);
             for (var i=0; i<newCommands.length; i++) {
                 $('.jkfdasjrejj select').append(
                     $('<option></option>').text(newCommands[i])
@@ -58,7 +57,8 @@ define(function (/* require, exports, module */) {
     };
     
     function handleHelloWorld() {
-        getInput(function(input) {
+        var allCommands = CommandManager.getAll();
+        getInput(allCommands, function(input) {
            if (allCommands.indexOf(input) === -1) { return false;}
            CommandManager.get(input)._commandFn();
         });
