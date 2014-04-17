@@ -60,8 +60,8 @@ define(function (require, exports, module) {
 						).trim() :
 					'';
                 Dialogs.cancelModalDialogIfOpen('jkfdasjrejj');
-                cb(t, shortCode, extraInput);
 				EditorManager.focusEditor();
+                cb(t, shortCode, extraInput);
             }
         });
         $('#jkfdasjrejj').keyup(function (e) {
@@ -82,9 +82,9 @@ define(function (require, exports, module) {
     function runCommand() {
         var allCommands = CommandManager.getAll();
         getInput(false, allCommands, function(input) {
-		if (allCommands.indexOf(input) === -1) { return false;}
+			if (allCommands.indexOf(input) === -1) { return false;}
 			CommandManager.get(input)._commandFn();
-        });
+		});
     }
 	
 	function setShortCommand() {
